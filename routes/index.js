@@ -3,16 +3,26 @@ var router = express.Router();
 
 
 /* GET main page */
-router.get('index.html', function(req, res, next) {
+router.get('/index.html', function(req, res, next) {
   res.render('index', {
-    title: 'Hey'
+    title: 'Главная',
+    menuactive: 'menu-main'
   });
 });
 
 /* GET news page */
-router.get('news', function(req, res, next) {
+router.get('/news.html', function(req, res, next) {
   res.render('news', {
-    title: 'Hey',
+    title: 'Новости',
+    menuactive: 'menu-news'
+  });
+});
+
+/* GET contacts page */
+router.get('/contacts.html', function(req, res, next) {
+  res.render('contacts', {
+    title: 'Контакты',
+    menuactive: 'menu-contacts'
   });
 });
 
@@ -20,7 +30,8 @@ router.get('news', function(req, res, next) {
 /* GET main page */
 router.get('/', function(req, res, next) {
   res.render('index', {
-    title: 'Hey'
+    title: 'Главная',
+    menuactive: 'menu-main'
   });
 });
 
