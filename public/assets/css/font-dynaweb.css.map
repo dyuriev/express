@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,UAGC;EAFD,WAAW,EAAE,SAAS;EAClB,GAAG,EAAE,sDAAsD",
+"sources": ["font-dynaweb.scss"],
+"names": [],
+"file": "font-dynaweb.css"
+}

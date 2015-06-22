@@ -1,0 +1,207 @@
+@import "normalize.scss";
+@import "main.scss";
+@import "font-dynaweb.scss";
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin transform($transform) {
+  -moz-transform: scale($transform);
+  -webkit-transform: scale($transform);
+  -o-transform: scale($transform);
+}
+
+@mixin transition($time, $type) {
+  -moz-transition: -moz-transform $time $type;
+  -webkit-transition: -webkit-transform $time $type;
+  -o-transition: -o-transform $time $type;
+}
+
+$h1-font-size: 2.5em;
+$h2-font-size: 1.8em;
+$weight-default: 400;
+$link-color: #0645AD;
+
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background: url(../../assets/img/new_version.png) left top no-repeat fixed, url('../../assets/img/1573090.jpg') fixed;
+}
+
+a {
+  text-decoration: underline;
+  color: $link-color;
+  &:hover, &:visited, &:active {
+    text-decoration: underline;
+    color: $link-color;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+nav {
+  font-size: 0;
+}
+
+p {
+  letter-spacing: -0.02em;
+  word-spacing: 0.3em;
+}
+
+.dynaweb, h1, h2 {
+  font-family: "DynaWeb";
+}
+
+h1 {
+  font-size: $h1-font-size;
+  font-weight: $weight-default;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  font-weight: $weight-default;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1000px;
+  box-shadow: 0 0 20px rgba(212, 212, 212, 5);
+  background-color: #fffafa;
+}
+
+nav a {
+  font-size: 22px;
+  margin-right: 40px;
+  text-decoration: none;
+  color: inherit;
+  &:hover, &:visited, &:active {
+    font-size: 22px;
+    margin-right: 40px;
+    text-decoration: none;
+    color: inherit;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &.active {
+    font-weight: bold;
+    background-color: #3A4644;
+    color: snow;
+    padding: 10px;
+  }
+}
+
+main {
+  margin: 0 50px 0 50px;
+  width: auto;
+}
+
+.main-menu {
+  text-transform: uppercase;
+  padding: 20px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  div {
+    margin: 0 auto;
+    width: 900px;
+  }
+}
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: #586B69;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+.site-logo {
+  padding: 25px 50px 25px 50px;
+}
+
+.contacts-logo {
+  padding-right: 50px;
+  padding-top: 20px;
+}
+
+.top-banner {
+  padding: 25px 0 20px 50px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.product {
+  float: left;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  margin: 0 30px 30px 0;
+  img {
+    width: 230px;
+    padding: 10px;
+    height: 300px;
+    @include transition(0.5s, ease-in);
+    &:hover {
+      @include transform(1.1);
+    }
+  }
+}
+
+.contact-map {
+  float: left;
+  margin-right: 20px;
+}
+
+.description {
+  margin-left: 20px;
+}
+
+.news-body {
+  margin-top: -10px;
+  padding-left: 20px;
+}
+
+.order-form-border {
+  border: 1px dashed black;
+  padding: 20px;
+  width: 200px;
+}
+
+div.description > p {
+  &::first-letter {
+    color: red;
+  }
+  text-indent: 20px;
+}
+
+.left-menu {
+  width: 150px;
+  margin-right: 20px;
+  ul {
+    list-style: square outside;
+    padding: 0;
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,26 @@
+doctype html
+html.no-js(lang='')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    title= title
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    // <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=cyrillic,latin' rel='stylesheet' type='text/css'>
+    link(href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400italic,400,700&subset=latin,cyrillic', rel='stylesheet', type='text/css')
+    //link(rel='stylesheet', href='css/normalize.css')
+    //link(rel='stylesheet', href='css/main.css')
+    //link(rel='stylesheet', href='assets/css/font-dynaweb.css?id=10')
+    //link(rel='stylesheet', href='assets/css/app.css?id=18')
+    //script(src='js/vendor/modernizr-2.8.3.min.js')
+    link(rel='stylesheet', href='assets/css/common.min.css')
+    script(src='js/common.min.js')
+  body
+    .container
+      include header
+      main
+        include left-menu
+        .overflow-hidden.main-content
+          block content
+        .clearfix
+      hr
+      include footer
